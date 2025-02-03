@@ -108,7 +108,7 @@ const SuperheroList = () => {
             </Button>
           </div>
         </div>
-        {!loading && (
+        {loading && (
             <div className="flex items-center justify-center h-2/4">
               <Image src={Loading} alt="Logo" width={150} height={150} />
             </div>
