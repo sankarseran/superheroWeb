@@ -6,7 +6,7 @@ import SuperheroFormModal from "./SuperheroFormModal";
 import { Button, Input, notification } from "antd";
 import Image from "next/image";
 import { apiURL } from "../util";
-import Loading from "../../public/loading.svg";
+import Loading from "../../public/loader.gif";
 
 interface Superhero {
   humilityRating: number;
@@ -91,7 +91,7 @@ const SuperheroList = () => {
       {contextHolder}
       <div className="container mx-auto p-4">
         {/* Fixed Header and Button */}
-        <div className="fixed top-14 left-0 right-0 p-4">
+        <div className="fixed z-50 bg-[#ffffff4d] top-14 left-0 right-0 p-4">
           <div className="flex justify-between items-center z-50">
             <Input
               placeholder="Search superheroes..."
@@ -109,10 +109,10 @@ const SuperheroList = () => {
           </div>
         </div>
         {loading && (
-            <div className="flex items-center justify-center h-2/4">
-              <Image src={Loading} alt="Logo" width={150} height={150} />
-            </div>
-          )}
+          <div className="absolute z-60 bg-transparent top-1/4 left-[45%] h-2/4">
+            <Image src={Loading} alt="Logo" width={150} height={150} />
+          </div>
+        )}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {filteredSuperheroes.map((superhero) => (
             <SuperheroCard

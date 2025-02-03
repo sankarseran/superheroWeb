@@ -16,12 +16,15 @@ interface SuperheroCardProps {
   onEdit: (superhero: Superhero) => void;
 }
 
+
+
 const SuperheroCard = ({ superhero, onEdit }: SuperheroCardProps) => {
+  const shImage = Math.floor(Math.random() * 21) + 1;
   return (
     <div className="relative bg-gray-900 text-white rounded-2xl overflow-hidden shadow-lg p-6">
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900"></div>
       <Image
-        src="/superhero-card.png"
+        src={`/sh-${shImage}.${shImage > 16 ? 'png' : 'jpg'}`}
         alt={superhero.name}
         width={500}
         height={200}
