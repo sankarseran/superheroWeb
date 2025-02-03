@@ -2,7 +2,7 @@
 
 import { Layout, Button } from "antd";
 import Image from "next/image";
-import { GithubOutlined } from "@ant-design/icons";
+import { BookOutlined, GithubOutlined } from "@ant-design/icons";
 import Logo from "../../public/logo.svg";
 
 export const NavHeader: React.FunctionComponent = () => {
@@ -44,6 +44,22 @@ export const NavHeader: React.FunctionComponent = () => {
           className="flex items-center gap-1.5 bg-gray-900 !hover:bg-gray-800"
         >
           API
+        </Button>
+        <Button
+          type="primary"
+          icon={<BookOutlined />}
+          onClick={() => {
+            const newTab = window.open(
+              "http://ec2-16-170-243-190.eu-north-1.compute.amazonaws.com:3000/api",
+              "_blank"
+            );
+            if (newTab) {
+              newTab.opener = null; // Ensures no access to the parent page
+            }
+          }}
+          className="flex items-center gap-1.5 bg-gray-900 !hover:bg-gray-800"
+        >
+          API Doc
         </Button>
       </div>
     </Layout.Header>
