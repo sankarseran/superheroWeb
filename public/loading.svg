@@ -1,0 +1,46 @@
+<svg
+  width="100"
+  height="100"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+  style="background: transparent;"
+>
+  <!-- Superhero Shield -->
+  <path
+    id="shield"
+    d="M50 10 L90 30 L90 70 L50 90 L10 70 L10 30 Z"
+    fill="none"
+    stroke="#FFD700"
+    stroke-width="5"
+  />
+  <!-- Inner Circle -->
+  <circle
+    cx="50"
+    cy="50"
+    r="20"
+    fill="none"
+    stroke="#FF4500"
+    stroke-width="5"
+  />
+  <!-- Superhero Emblem (e.g., "S") -->
+  <text
+    x="50"
+    y="55"
+    font-size="20"
+    font-weight="bold"
+    text-anchor="middle"
+    fill="#FF4500"
+  >
+    S
+  </text>
+  <!-- Apply Rotation Animation -->
+  <animateTransform
+    attributeName="transform"
+    attributeType="XML"
+    type="rotate"
+    from="0 50 50"
+    to="360 50 50"
+    dur="2s"
+    repeatCount="indefinite"
+  />
+</svg>

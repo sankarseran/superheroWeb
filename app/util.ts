@@ -1,0 +1,1 @@
+export const apiURL = 'http://ec2-16-170-243-190.eu-north-1.compute.amazonaws.com:3000/superheroes';

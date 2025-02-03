@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary-color: #1E40AF;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ant-btn-primary {
+  background-color: #111827 !important;
+  border-color: #111827 !important;
+}
+
+.ant-btn-primary:hover {
+  background-color: rgb(55 65 81) !important;
+  border-color: rgb(55 65 81) !important;
+}
