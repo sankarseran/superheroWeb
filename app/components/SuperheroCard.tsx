@@ -2,6 +2,7 @@
 
 import { Rate } from "antd";
 import Image from "next/image";
+import { useState } from "react";
 
 interface Superhero {
   humilityRating: number;
@@ -19,7 +20,14 @@ interface SuperheroCardProps {
 
 
 const SuperheroCard = ({ superhero, onEdit }: SuperheroCardProps) => {
-  const shImage = Math.floor(Math.random() * 21) + 1;
+  const heroImage: { [key: string]: number } = {
+    'captain america': 17,
+    'black panther': 21,
+    'iron man': 19,
+    'spider-man': 15,
+  }
+  const [shImage] = useState(heroImage[superhero.name] ?? Math.floor(Math.random() * 21) + 1);
+
   return (
     <div className="relative bg-gray-900 text-white rounded-2xl overflow-hidden shadow-lg p-6">
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900"></div>
