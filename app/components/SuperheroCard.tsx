@@ -31,7 +31,7 @@ const SuperheroCard = ({ superhero, onEdit }: SuperheroCardProps) => {
         className="w-full h-40 object-cover rounded-t-2xl"
       />
       <div className="relative z-10 p-4">
-        <h2 className="text-2xl font-bold">{superhero.name}</h2>
+        <h2 className="text-2xl font-bold capitalize">{superhero.name}</h2>
         <div className="flex items-start gap-2 mt-2 cursor-pointer" onClick={() => onEdit(superhero)}>
           <div className="text-yellow-400">Rating</div>
           <Rate
@@ -40,7 +40,7 @@ const SuperheroCard = ({ superhero, onEdit }: SuperheroCardProps) => {
             count={10}
           />
         </div>
-        <p className="text-gray-400 mt-2">
+        <p className="text-gray-400 mt-2 capitalize">
           Powers: {superhero.powers.map((p) => p.name).join(", ")}
         </p>
       </div>

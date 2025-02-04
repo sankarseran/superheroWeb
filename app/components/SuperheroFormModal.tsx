@@ -148,6 +148,7 @@ const SuperheroFormModal = ({
               placeholder="Select Powers"
               style={{ width: "100%" }}
               options={powerOptions}
+              className="capitalize"
             />
           </Form.Item>
         </Form>

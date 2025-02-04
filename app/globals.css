@@ -25,3 +25,7 @@ body {
   background-color: rgb(55 65 81) !important;
   border-color: rgb(55 65 81) !important;
 }
+
+.ant-select-item-option {
+  text-transform: capitalize;
+}
