@@ -6,25 +6,31 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev:server": "node server.js"
   },
   "dependencies": {
     "@ant-design/icons": "^5.6.0",
+    "@nestjs/platform-express": "^11.0.7",
     "antd": "^5.23.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
     "lucide-react": "^0.474.0",
-    "next": "15.1.6",
+    "next": "^15.1.6",
+    "nodemon": "^3.1.9",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
-    "@types/react": "^19",
+    "@types/react": "^19.0.8",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5.7.3"
   }
 }
