@@ -7,7 +7,7 @@ import { Button, Input, notification } from "antd";
 import Image from "next/image";
 import { apiURL } from "../util";
 import Loading from "../../public/loader.gif";
-import { data } from "../sampledata";
+import { data as sampledata} from "../sampledata";
 
 interface Superhero {
   humilityRating: number;
@@ -46,7 +46,8 @@ const SuperheroList = () => {
         showProgress: true,
         pauseOnHover: true,
       });
-      setSuperheroes(data);
+      setSuperheroes(sampledata);
+      setFilteredSuperheroes(sampledata);
     }
   }, [api]);
 
