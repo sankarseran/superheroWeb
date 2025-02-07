@@ -7,6 +7,7 @@ import { Button, Input, notification } from "antd";
 import Image from "next/image";
 import { apiURL } from "../util";
 import Loading from "../../public/loader.gif";
+import { data } from "../sampledata";
 
 interface Superhero {
   humilityRating: number;
@@ -41,10 +42,11 @@ const SuperheroList = () => {
       console.error("Error fetching superheroes:", error);
       api.error({
         message: "Error",
-        description: "Failed to fetch superheroes. Please try again later.",
+        description: "Failed to fetch superheroes. So, now loading the sample data set.",
         showProgress: true,
         pauseOnHover: true,
       });
+      setSuperheroes(data);
     }
   }, [api]);
 
